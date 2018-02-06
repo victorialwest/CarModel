@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import static com.company.Main.mainMenu;
 
-public class Car {
+public class Car extends Prebuilt {
 
     private Scanner input = new Scanner(System.in);
     private int year;
@@ -15,9 +15,20 @@ public class Car {
     private int gas = 100;
 
     public Car() {
-        System.out.println("What is the year of your car?");
         setYear(input.nextInt());
+        setMake(input.nextLine());
+        setModel(input.nextLine());
+        setSpeed(0);
+        setGas(100);
 
+
+    }
+
+
+    public Car(int year, String make, String model, int speed, int gas) {
+        super(year, make, model, speed, gas);
+        this.speed = speed;
+        this.gas = gas;
     }
 
     public int getYear() {
@@ -85,8 +96,8 @@ public class Car {
     }
 
     public void getCarInfo() {
-        System.out.println("The " + getMake() + " " + getModel() + " is going " + getSpeed() + "MPH" +
-                "and has " + getGas() + "% of its gas left. ");
+        System.out.println("The " + getMake() + " " + getModel() + " is going " + getSpeed() + " MPH" +
+                " and has " + getGas() + "% of its gas left. ");
     }
 
     public void driveCar(Car car) {

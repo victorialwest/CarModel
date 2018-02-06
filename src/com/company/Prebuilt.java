@@ -10,6 +10,7 @@ public class Prebuilt {
     private int gas = 100;
 
     public Prebuilt() {
+
     }
 
     public int getYear() {
