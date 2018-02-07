@@ -3,13 +3,16 @@ package com.company;
 public class Prebuilt {
 
 
-    private int year;
-    private String make;
-    private String model;
+    public int year;
+    public String make;
+    public String model;
     private int speed = 0;
     private int gas = 100;
 
-    public Prebuilt() {
+    public Prebuilt(int year, String make, String model) {
+        this.year = year;
+        this.make = make;
+        this.model = model;
 
     }
 

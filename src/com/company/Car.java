@@ -8,13 +8,13 @@ import static com.company.Main.mainMenu;
 public class Car extends Prebuilt {
 
     private Scanner input = new Scanner(System.in);
-    private int year;
-    private String make;
-    private String model;
+
     private int speed = 0;
     private int gas = 100;
 
-    public Car() {
+
+    public Car(int year, String make, String model) {
+        super(year, make, model);
         setYear(input.nextInt());
         setMake(input.nextLine());
         setModel(input.nextLine());
@@ -26,7 +26,7 @@ public class Car extends Prebuilt {
 
 
     public Car(int year, String make, String model, int speed, int gas) {
-        super(year, make, model, speed, gas);
+        super(year, make, model);
         this.speed = speed;
         this.gas = gas;
     }

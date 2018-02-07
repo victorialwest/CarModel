@@ -5,24 +5,25 @@ import java.util.Scanner;
 
 public class MainMenu {
 
-    private Scanner input = new Scanner(System.in);
+    private Scanner input;
 
     protected void createCar() {
 
             System.out.println("What kind of car would you like to create?");
             System.out.println("1. Custom \n2. Ready to go \n3. Exit ");
-
+            input = new Scanner(System.in);
+            int selection = input.nextInt();
             try {
-                switch (input.nextInt()) {
+                switch (selection) {
                     case 1:
-                        Car car = new Car();
+                        Car car = new Car(2015, "Chevy", "Malibu");
                         car.getCarInfo();
                         menu(car);
                         break;
                     case 2:
-                        Corvette corvette;
-                        corvette = new Corvette (2003, "Corvette", "206", 0, 100);
+                        Corvette corvette = new Corvette (2003, "Corvette", "206", 0, 100);
                         corvette.getCorvetteInfo();
+                        menu(corvette);
                         break;
                     case 3:
                         //exit

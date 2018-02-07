@@ -8,7 +8,7 @@ public class Corvette  extends Car {
     private int gas = 100;
 
     public Corvette(int year, String make, String model, int speed, int gas) {
-        super(year, make, model, speed, speed, gas);
+        super(year, make, model, speed, gas);
     }
 
 
